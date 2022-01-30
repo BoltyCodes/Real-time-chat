@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat App</title>
+  <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script defer src="main.js"></script>
+  <Script defer src="client.js"></Script>
+  <header class="head">Chat App</header>
+ 
+ 
+
+  <style>
+      body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background: lightblue;
+    
+  }
+
+  #message-container {
+    width: 30%;
+    max-width: 1200px;
+    border: 5px solid;
+    padding: 150px;
+    margin-top:10%;
+
+  }
+
+  #message-container div {
+    background-color: cyan;
+    padding: 5px;
+  }
+
+  #message-container div:nth-child(2n) {
+    background-color: cyan;
+  }
+
+  #send-container {
+    position: fixed;
+    padding-bottom: 30px;
+    margin-bottom:10%;
+    bottom: 0;
+    
+    max-width: 1000px;
+    width: 80%;
+    display: flex;
+  }
+
+  #message-input {
+    flex-grow: 1;
+  }
+  .head{
+    font-size:50px;
+    color:cyan;
+    padding:3px;
+    margin-left:5px;
+  }
+  
+  </style>
+
+</head>
+<body>
+  <div id="message-container"></div>
+  <form id="send-container">
+    <input type="text" id="message-input">
+    <button type="submit" id="send-button" class="input-group input-group-lg">Send</button>
+  </form>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
